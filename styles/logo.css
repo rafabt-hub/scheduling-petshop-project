@@ -1,0 +1,17 @@
+.logo {
+  display: flex;
+  width: 18rem;
+  height: 5rem;
+  gap: .5rem;
+  padding: 1.5rem;
+  align-items: center;
+  border-bottom-right-radius: 1rem;
+  background-color: var(--border-primary);
+  font: var(--label-large);
+  color: var(--content-brand);
+
+  & img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
