@@ -1,0 +1,59 @@
+.modal {
+  justify-self: center;
+  font: var(--label-large);
+  color: var(--content-primary);
+  margin-top: 4rem;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+#name {
+  border: 1px solid var(--content-secondary);
+  background-color: var(--background-secondary);
+  padding: 8px;
+  border-radius: 5px;
+}
+
+#namepet {
+  border: 1px solid var(--content-secondary);
+  background-color: var(--background-secondary);
+  padding: 8px;
+  border-radius: 5px;
+}
+
+#phone {
+  border: 1px solid var(--content-secondary);
+  background-color: var(--background-secondary);
+  padding: 8px;
+  border-radius: 5px;
+}
+
+#description {
+  border: 1px solid var(--content-secondary);
+  background-color: var(--background-secondary);
+  padding: 8px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#date {
+  border: 1px solid var(--content-secondary);
+  background-color: var(--background-secondary);
+  padding: 8px;
+  border-radius: 5px;
+  font: var(--label-large);
+  color: var(--content-primary);
+}
+
+#hour {
+  border: 1px solid var(--content-secondary);
+  background-color: var(--background-secondary);
+  padding: 8px;
+  border-radius: 5px;
+  font: var(--label-large);
+  color: var(--content-primary);
+}

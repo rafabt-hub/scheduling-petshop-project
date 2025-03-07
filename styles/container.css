@@ -70,3 +70,23 @@
 .separator {
   border-top: 1px solid var(--border-divisor);
 }
+
+.btn-new {
+  justify-self: flex-end;
+  margin-right: 10rem;
+}
+
+button {
+  width: 240px;
+  height: 48px;
+  font: var(--label-large);
+  color: var(--background-primary);
+  cursor: pointer;
+  background-color: var(--content-brand);
+  border: none;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: var(--background-hightlights);
+}
