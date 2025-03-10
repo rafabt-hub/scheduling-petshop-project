@@ -165,8 +165,10 @@
   padding-left: 35px;
 }
 
-#name:not(:placeholder-shown), #namepet:not(:placeholder-shown), #phone:not(:placeholder-shown) {
-  background-color: var(--background-secondary);
-  color: var(--content-secondary);
+.modal-content #name:not(:placeholder-shown),
+.modal-content #namepet:not(:placeholder-shown),
+.modal-content #phone:not(:placeholder-shown) {
+  background-color: var(--background-secondary) !important;
+  color: var(--content-secondary) !important;
   padding-left: 40px;
 }
