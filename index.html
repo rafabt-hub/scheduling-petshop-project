@@ -73,38 +73,41 @@
         <p>Consulta</p>
         <a>Remover agendamento</a>
     </div>
-</div>
+  </div>
 
   <div class="btn-new">
     <button id="openModal">NOVO AGENDAMENTO</button>
   </div>
 
-  <div class="modal" id="agendamentoModal">
-    <div class="modal-content">
+  <form class="modal" id="agendamentoModal">
+      <div class="modal-content">
         <h2>Agende um atendimento</h2>
         <p>Preencha os dados do cliente para realizar o agendamento:</p>
         <label for="name">Nome do tutor</label>
-        <input type="text" id="name" placeholder="Helena Souza" required>
+        <input type="text" id="name" class="input-field" placeholder="Helena Souza" required>
 
         <label for="namepet">Nome do pet</label>
-        <input type="text" id="namepet" placeholder="Cheddar" required>
+        <input type="text" id="namepet" class="input-field" placeholder="Cheddar" required>
 
         <label for="phone">Telefone</label>
-        <input type="text" id="phone" placeholder="(00) - 0000-0000">
+        <input type="text" id="phone" class="input-field" placeholder="(00) - 0000-0000">
 
-        <label for="descripiton">Descrição do serviço</label>
-        <textarea id="descripiton" rows="3" cols="30" placeholder="Descrição"></textarea>
+        <label for="description">Descrição do serviço</label>
+        <textarea id="description" class="input-field" rows="3" cols="30" placeholder="Descrição"></textarea>
+      </div>
 
-
+      <div class="date-time">
         <label for="date">Data</label>
         <input type="date" id="date" required>
 
         <label for="hour">Hora</label>
         <input type="time" id="hour" required>
+      </div>
 
-        <button id="confirmarAgendamento">Agendar</button>
-    </div>
-</div>
+     <div class="btn-confirm">
+      <button type="submit" id="confirm">Agendar</button>
+     </div>
+  </form>
   
 </body>
 </html>

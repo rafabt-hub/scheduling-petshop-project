@@ -76,7 +76,7 @@
   margin-right: 10rem;
 }
 
-button {
+#openModal {
   width: 240px;
   height: 48px;
   font: var(--label-large);
@@ -87,6 +87,27 @@ button {
   border-radius: 10px;
 }
 
-button:hover {
+#openModal:hover {
   background-color: var(--background-hightlights);
+}
+
+#confirm {
+  width: 140px;
+  height: 48px;
+  font: var(--label-large);
+  color: var(--background-primary);
+  cursor: pointer;
+  background-color: var(--content-brand);
+  border: none;
+  border-radius: 10px;
+}
+
+#confirm:hover {
+  background-color: var(--background-hightlights);
+}
+
+.btn-confirm {
+  display: flex;
+  justify-self: flex-end;
+  margin-top: 2rem;
 }

@@ -9,51 +9,164 @@
   display: flex;
   flex-direction: column;
   gap: .5rem;
+
+  & p {
+    font: var(--paragraph-medium);
+    color: var(--content-secondary);
+    margin-bottom: 1rem;
+  }
 }
 
 #name {
-  border: 1px solid var(--content-secondary);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(/assets/person.svg);
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 20px;
+  padding-left: 35px;
+  border: 2px solid var(--border-primary);
   background-color: var(--background-secondary);
+  width: 100%;
+  height: 40px;
   padding: 8px;
   border-radius: 5px;
+  font: var(--label-large);
+  color: var(--content-secondary);
 }
 
 #namepet {
-  border: 1px solid var(--content-secondary);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(/assets/pet-paw.svg);
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 20px;
+  padding-left: 35px;
+  border: 2px solid var(--border-primary);
   background-color: var(--background-secondary);
+  width: 100%;
+  height: 40px;
   padding: 8px;
   border-radius: 5px;
+  font: var(--label-large);
+  color: var(--content-secondary);
 }
 
 #phone {
-  border: 1px solid var(--content-secondary);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(/assets/phone.svg);
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 20px;
+  padding-left: 35px;
+  border: 2px solid var(--border-primary);
   background-color: var(--background-secondary);
+  width: 100%;
+  height: 40px;
   padding: 8px;
   border-radius: 5px;
+  font: var(--label-large);
+  color: var(--content-secondary);
 }
 
 #description {
-  border: 1px solid var(--content-secondary);
+  border: 2px solid var(--border-primary);
   background-color: var(--background-secondary);
   padding: 8px;
   border-radius: 5px;
   width: 100%;
+  font: var(--label-large);
+  color: var(--content-secondary);
 }
 
 #date {
-  border: 1px solid var(--content-secondary);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(/assets/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 20px;
+  padding-left: 50px;
+  text-indent: 15px;
+  border: 2px solid var(--border-primary);
   background-color: var(--background-secondary);
   padding: 8px;
   border-radius: 5px;
   font: var(--label-large);
-  color: var(--content-primary);
+  color: var(--content-secondary);
 }
 
 #hour {
-  border: 1px solid var(--content-secondary);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  background-image: url(/assets/clock.svg);
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 20px;
+  padding-left: 50px;
+  text-indent: 15px;
+  border: 2px solid var(--border-primary);
   background-color: var(--background-secondary);
   padding: 8px;
   border-radius: 5px;
   font: var(--label-large);
-  color: var(--content-primary);
+  color: var(--content-secondary);
+}
+
+.date-time {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#name, 
+#namepet, 
+#phone, 
+#description, 
+#date, 
+#hour {
+  transition: border-color 0.3s ease;
+}
+
+#name:hover, 
+#namepet:hover, 
+#phone:hover, 
+#description:hover, 
+#date:hover, 
+#hour:hover {
+  border-color: var(--border-secondary);
+}
+
+#name:focus, 
+#namepet:focus, 
+#phone:focus, 
+#description:focus, 
+#date:focus, 
+#hour:focus {
+  border-color: var(--border-brand);
+  background-color: var(--background-secondary);
+  outline: none;
+}
+
+#name::placeholder,
+#namepet::placeholder,
+#phone::placeholder {
+  font: var(--label-large);
+  color: var(--content-secondary);
+  padding-left: 35px;
+}
+
+#name:not(:placeholder-shown), #namepet:not(:placeholder-shown), #phone:not(:placeholder-shown) {
+  background-color: var(--background-secondary);
+  color: var(--content-secondary);
+  padding-left: 40px;
 }
