@@ -93,7 +93,24 @@ document.addEventListener("DOMContentLoaded", function () {
           <a href="#" class="remove">Remover agendamento</a>
       `;
       
-      periodContainer.parentNode.insertBefore(newAppointment, periodContainer.nextElementSibling);
+      // Adicionar agendamento e ordenar por horário
+      const appointments = Array.from(periodContainer.parentNode.querySelectorAll(".morning"));
+      appointments.push(newAppointment);
+      appointments.sort((a, b) => {
+          const timeA = a.querySelector("h2").textContent;
+          const timeB = b.querySelector("h2").textContent;
+          return timeB.localeCompare(timeA);
+      });
+      
+      periodContainer.parentNode.querySelectorAll(".morning").forEach(el => el.remove());
+      appointments.forEach((el, index) => {
+          if (index > 0) {
+              el.style.borderRadius = "0";
+          } else {
+              el.style.borderRadius = "0 0 .5rem .5rem";
+          }
+          periodContainer.parentNode.insertBefore(el, periodContainer.nextElementSibling);
+      });
       
       newAppointment.querySelector(".remove").addEventListener("click", function (event) {
           event.preventDefault();
