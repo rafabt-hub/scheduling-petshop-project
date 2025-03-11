@@ -92,7 +92,7 @@
   background-repeat: no-repeat;
   background-position: left 10px center;
   background-size: 20px;
-  padding-left: 50px;
+  width: 100%;
   text-indent: 15px;
   border: 2px solid var(--border-primary);
   background-color: var(--background-secondary);
@@ -111,7 +111,6 @@
   background-repeat: no-repeat;
   background-position: left 10px center;
   background-size: 20px;
-  padding-left: 50px;
   text-indent: 15px;
   border: 2px solid var(--border-primary);
   background-color: var(--background-secondary);
@@ -171,4 +170,12 @@
   background-color: var(--background-secondary) !important;
   color: var(--content-secondary) !important;
   padding-left: 40px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    box-shadow: 0 0 0px 1000px var(--background-secondary) inset !important;
+    -webkit-text-fill-color: var(--content-secondary) !important; 
 }

@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Ocultar form incialmente
   modal.style.display = "none";
   modal.style.position = "fixed";
-  modal.style.top = "50%";
+  modal.style.top = "40%";
   modal.style.left = "50%";
   modal.style.transform = "translate(-50%, -50%)";
   modal.style.background = "#1E1E1E";
