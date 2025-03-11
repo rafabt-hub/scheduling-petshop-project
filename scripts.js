@@ -3,30 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("agendamentoModal");
     const confirmBtn = document.getElementById("confirm");
     
-    const closeModal = () => {
-        modal.style.display = "none";
-        overlay.style.display = "none";
-        document.getElementById("name").value = "";
-        document.getElementById("namepet").value = "";
-        document.getElementById("phone").value = "";
-        document.getElementById("description").value = "";
-        document.getElementById("date").value = "";
-        document.getElementById("hour").value = "";
-    };
-    
-    // Ocultar form incialmente
-    modal.style.display = "none";
-    modal.style.position = "fixed";
-    modal.style.top = "40%";
-    modal.style.left = "50%";
-    modal.style.transform = "translate(-50%, -50%)";
-    modal.style.background = "#1E1E1E";
-    modal.style.padding = "20px";
-    modal.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.3)";
-    modal.style.zIndex = "1000";
-    modal.style.borderRadius = "10px";
-    
-    // Config form
     const overlay = document.createElement("div");
     overlay.style.position = "fixed";
     overlay.style.top = "0";
@@ -38,18 +14,37 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay.style.zIndex = "999";
     document.body.appendChild(overlay);
     
-    // Exibir form 
+    modal.style.display = "none";
+    modal.style.position = "fixed";
+    modal.style.top = "40%";
+    modal.style.left = "50%";
+    modal.style.transform = "translate(-50%, -50%)";
+    modal.style.background = "#1E1E1E";
+    modal.style.padding = "20px";
+    modal.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.3)";
+    modal.style.zIndex = "1000";
+    modal.style.borderRadius = "10px";
+    
+    const closeModal = () => {
+        modal.style.display = "none";
+        overlay.style.display = "none";
+        document.getElementById("name").value = "";
+        document.getElementById("namepet").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("description").value = "";
+        document.getElementById("date").value = "";
+        document.getElementById("hour").value = "";
+    };
+    
     openModalBtn.addEventListener("click", () => {
         modal.style.display = "block";
         overlay.style.display = "block";
     });
     
-    // Fechar form
     overlay.addEventListener("click", () => {
         closeModal();
     });
     
-    // Bloquear datas e horários 
     const dateInput = document.getElementById("date");
     const hourInput = document.getElementById("hour");
     const today = new Date().toISOString().split("T")[0];
@@ -94,24 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="#" class="remove">Remover agendamento</a>
         `;
         
-        // Adicionar agendamento e ordenar por horário
-        const appointments = Array.from(periodContainer.parentNode.querySelectorAll(".morning"));
-        appointments.push(newAppointment);
-        appointments.sort((a, b) => {
-            const timeA = a.querySelector("h2").textContent;
-            const timeB = b.querySelector("h2").textContent;
-            return timeA.localeCompare(timeB);
-        });
-        
-        periodContainer.parentNode.querySelectorAll(".morning").forEach(el => el.remove());
-        appointments.forEach((el, index) => {
-            if (index > 0) {
-                el.style.borderRadius = "0";
-            } else {
-                el.style.borderRadius = "0 0 .5rem .5rem";
-            }
-            periodContainer.parentNode.insertBefore(el, periodContainer.nextElementSibling);
-        });
+        periodContainer.parentNode.insertBefore(newAppointment, periodContainer.nextElementSibling);
         
         newAppointment.querySelector(".remove").addEventListener("click", function (event) {
             event.preventDefault();
@@ -121,7 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
         closeModal();
     });
     
-    // Filtro por data
     document.querySelector(".custom-date input").addEventListener("change", function () {
         const selectedDate = this.value;
         document.querySelectorAll(".morning").forEach(appointment => {
