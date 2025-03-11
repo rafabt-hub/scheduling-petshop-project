@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("hour").value = "";
   };
   
-  // Inicialmente, ocultar o modal
+  // Ocultar modal incialmente
   modal.style.display = "none";
   modal.style.position = "fixed";
   modal.style.top = "50%";
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   modal.style.zIndex = "1000";
   modal.style.borderRadius = "10px";
   
-  // Criar um fundo escuro para modal
+  // Config do modal
   const overlay = document.createElement("div");
   overlay.style.position = "fixed";
   overlay.style.top = "0";
@@ -37,18 +37,18 @@ document.addEventListener("DOMContentLoaded", function () {
   overlay.style.zIndex = "999";
   document.body.appendChild(overlay);
   
-  // Exibir modal ao clicar no botão "Novo Agendamento"
+  // Exibir modal 
   openModalBtn.addEventListener("click", () => {
       modal.style.display = "block";
       overlay.style.display = "block";
   });
   
-  // Fechar modal ao clicar fora dele
+  // Fechar modal
   overlay.addEventListener("click", () => {
       closeModal();
   });
   
-  // Bloquear datas e horários passados
+  // Bloquear datas e horários 
   const dateInput = document.getElementById("date");
   const hourInput = document.getElementById("hour");
   const today = new Date().toISOString().split("T")[0];
