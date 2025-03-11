@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("hour").value = "";
   };
   
-  // Ocultar modal incialmente
+  // Ocultar form incialmente
   modal.style.display = "none";
   modal.style.position = "fixed";
   modal.style.top = "50%";
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   modal.style.zIndex = "1000";
   modal.style.borderRadius = "10px";
   
-  // Config do modal
+  // Config form
   const overlay = document.createElement("div");
   overlay.style.position = "fixed";
   overlay.style.top = "0";
@@ -37,13 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
   overlay.style.zIndex = "999";
   document.body.appendChild(overlay);
   
-  // Exibir modal 
+  // Exibir form 
   openModalBtn.addEventListener("click", () => {
       modal.style.display = "block";
       overlay.style.display = "block";
   });
   
-  // Fechar modal
+  // Fechar form
   overlay.addEventListener("click", () => {
       closeModal();
   });
