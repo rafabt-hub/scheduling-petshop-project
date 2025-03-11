@@ -3,7 +3,9 @@
   width: 41rem;
 }
 
-.morning-period {
+.morning-period,
+.afternoon-period,
+.night-period {
   display: flex;
   align-items: center;
   justify-content: space-between;
